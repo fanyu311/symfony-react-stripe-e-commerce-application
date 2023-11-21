@@ -16,6 +16,7 @@ class Product
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
+    // product:read 可能是你在读取产品的序列化上下文中定义的一个组名。这意味着在序列化对象（可能是一个产品实体）时，只有属于 product:read 组的属性才会包含在序列化的表示中。
     #[Groups('product:read')]
     private ?int $id = null;
 
